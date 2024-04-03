@@ -21,6 +21,11 @@ const Home = (props) => {
             content="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/6a84ef1a-1de1-4611-9300-64b653130fff/354462f3-2198-4dd4-bf07-9c363908df1d?org_if_sml=1&amp;force_format=original"
           />
         </Head>
+        <header data-role="Header" className="home-header">
+          <span className="home-text">
+            Regular auctions start 4/20 at 4:20 PM EST
+          </span>
+        </header>
         <div className="home-hero">
           <animate-on-reveal
             animation="pulse"
@@ -37,8 +42,8 @@ const Home = (props) => {
               className="home-image"
             />
           </animate-on-reveal>
-          <h1 className="home-text">blunts.wtf</h1>
-          <h3 className="home-text01">forever re-upping the blunt treasury.</h3>
+          <h1 className="home-text01">blunts.wtf</h1>
+          <h3 className="home-text02">forever re-upping the blunt treasury.</h3>
           <a
             href="/waitlist"
             target="_blank"
@@ -48,7 +53,7 @@ const Home = (props) => {
             waitlist
           </a>
         </div>
-        <p className="home-text02">
+        <p className="home-text03">
           <span>
             on 🔵
             <span
@@ -83,7 +88,7 @@ const Home = (props) => {
             BluntDAO 
           </a>
           <br></br>
-          <span className="home-text06">
+          <span className="home-text07">
             This work is licensed under the Creative Commons
             <span
               dangerouslySetInnerHTML={{
@@ -99,12 +104,12 @@ const Home = (props) => {
           >
             CC0
           </a>
-          <span className="home-text07">
+          <span className="home-text08">
             {' '}
             1.0 Universal Public Domain Dedication.
           </span>
-          <br className="home-text08"></br>
-          <span className="home-text09">
+          <br className="home-text09"></br>
+          <span className="home-text10">
             {' '}
             +
             <span
@@ -121,7 +126,7 @@ const Home = (props) => {
           >
             NounsDAO
           </a>
-          <span className="home-text10"> Ecosystem</span>
+          <span className="home-text11"> Ecosystem</span>
           <br></br>
         </p>
       </div>
@@ -134,6 +139,27 @@ const Home = (props) => {
             min-height: 100vh;
             flex-direction: column;
             justify-content: center;
+          }
+          .home-header {
+            top: 0px;
+            flex: initial;
+            left: 0px;
+            width: 100%;
+            display: flex;
+            padding: 5pxpx;
+            position: absolute;
+            max-width: var(--dl-size-size-maxwidth);
+            align-self: center;
+            padding-top: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            padding-bottom: 5px;
+            justify-content: center;
+            background-color: #00a556;
+          }
+          .home-text {
+            color: #ffffff;
+            font-family: 'Londrina Solid';
           }
           .home-hero {
             width: 100%;
@@ -150,7 +176,7 @@ const Home = (props) => {
             width: 400px;
             object-fit: cover;
           }
-          .home-text {
+          .home-text01 {
             font-size: 50px;
             font-family: 'Londrina Solid';
             animation-name: swing;
@@ -160,7 +186,7 @@ const Home = (props) => {
             animation-iteration-count: 1;
             animation-timing-function: ease;
           }
-          .home-text01 {
+          .home-text02 {
             font-size: 15px;
             font-style: normal;
             font-family: 'Londrina Solid';
@@ -185,14 +211,21 @@ const Home = (props) => {
           .home-link:hover {
             transform: scale(1.02);
           }
-          .home-text02 {
+          .home-text03 {
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            bottom: 0px;
+            padding: 5pxx;
+            position: absolute;
             align-self: center;
+            margin-top: 5px;
             text-align: center;
             padding-top: 1px;
             padding-left: 1px;
+            margin-bottom: 5px;
             padding-right: 1px;
             padding-bottom: 1px;
-            background-color: #f1f1f1;
           }
           .home-link1 {
             text-decoration: underline;
@@ -200,7 +233,7 @@ const Home = (props) => {
           .home-link2 {
             text-decoration: underline;
           }
-          .home-text06 {
+          .home-text07 {
             font-size: 10px;
             line-height: 1;
           }
@@ -208,10 +241,6 @@ const Home = (props) => {
             font-size: 10px;
             line-height: 1;
             text-decoration: underline;
-          }
-          .home-text07 {
-            font-size: 10px;
-            line-height: 1;
           }
           .home-text08 {
             font-size: 10px;
@@ -221,22 +250,33 @@ const Home = (props) => {
             font-size: 10px;
             line-height: 1;
           }
+          .home-text10 {
+            font-size: 10px;
+            line-height: 1;
+          }
           .home-link4 {
             font-size: 10px;
             line-height: 1;
             text-decoration: underline;
           }
-          .home-text10 {
+          .home-text11 {
             font-size: 10px;
             line-height: 1;
           }
           @media (max-width: 767px) {
+            .home-header {
+              padding-left: var(--dl-space-space-twounits);
+              padding-right: var(--dl-space-space-twounits);
+            }
             .home-hero {
               padding-left: var(--dl-space-space-twounits);
               padding-right: var(--dl-space-space-twounits);
             }
           }
           @media (max-width: 479px) {
+            .home-header {
+              padding: var(--dl-space-space-unit);
+            }
             .home-hero {
               padding-top: var(--dl-space-space-twounits);
               padding-left: var(--dl-space-space-unit);
